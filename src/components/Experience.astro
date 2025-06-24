@@ -1,0 +1,40 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        title: "Software Engineer",
+        company: "Tech Solutions Inc.",
+        location: "San Francisco, CA",
+        date: "June 2020 - Present",
+        description:
+            "Developing scalable web applications using React and Node.js.",
+    },
+    {
+        title: "Frontend Developer",
+        company: "Creative Agency",
+        location: "New York, NY",
+        date: "January 2018 - May 2020",
+        description:
+            "Worked on various client projects, focusing on responsive design and user experience.",
+    },
+    {
+        title: "Intern Software Developer",
+        company: "Startup Hub",
+        location: "Remote",
+        date: "June 2017 - August 2017",
+        description:
+            "Assisted in developing a mobile application using Flutter.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>
